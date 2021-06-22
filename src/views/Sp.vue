@@ -63,6 +63,7 @@ import SpDesigner from '@/components/SpDesigner.vue'
 import SpNavOverlay from '@/components/SpNavOverlay.vue'
 
 export default defineComponent({
+  name: 'Sp',
   components: {
     SpHeading,
     SpDesigns,

@@ -59,6 +59,7 @@ import { defineComponent, PropType } from 'vue'
 import { Design } from 'smartphone-app-designers-portfolio-api-docs/client'
 
 export default defineComponent({
+  name: 'DesignInfo',
   props: {
     design: {
       type: Object as PropType<Design>,

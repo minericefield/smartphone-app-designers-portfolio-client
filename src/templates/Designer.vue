@@ -41,7 +41,7 @@ import Mobile from '@/components/Mobile.vue'
 import Mail from '@/components/Mail.vue'
 
 export default defineComponent({
-  name: 'Designs',
+  name: 'Designer',
   components: {
     BgBehind,
     Mobile,
