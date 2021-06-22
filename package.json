@@ -10,17 +10,20 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
     "core-js": "^3.6.5",
     "normalize-css": "^2.3.1",
     "register-service-worker": "^1.7.1",
     "smartphone-app-designers-portfolio-api-docs": "git+https://github.com/minericefield/smartphone-app-designers-portfolio-api-docs.git#dev-0.1.0",
     "vue": "^3.0.0",
+    "vue-lottie": "^0.2.1",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
     "@types/axios": "^0.14.0",
+    "@types/bluebird": "^3.5.35",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
