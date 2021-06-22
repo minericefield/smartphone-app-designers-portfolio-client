@@ -1,5 +1,16 @@
 <template>
   <div class="app">
+    <opening
+      v-if="isOpeningVisible"
+      @on-complete="onOpeningComplete"
+    />
+
+    <template
+      v-else-if="[graphicDesigns, uiDesigns, designer].every(content => content.isAvailable.value)"
+    >
+      <router-view v-if="!generals.shouldHandleAsSp.value" key="main" />
+      <sp v-else key="sp" />
+    </template>
   </div>
 </template>
 
@@ -13,9 +24,14 @@ import { useUiDesigns, UI_DESIGNS_KEY } from '@/composables/useUiDesigns'
 import { useDesigner, DESIGNER_KEY } from '@/composables/useDesigner'
 import { useOpening } from '@/composables/useOpening'
 
+import Opening from '@/templates/Opening.vue'
+import Sp from '@/views/Sp.vue'
+
 export default defineComponent({
   name: 'App',
   components: {
+    Opening,
+    Sp
   },
   setup () {
     const generals = useGenerals()
