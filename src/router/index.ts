@@ -5,6 +5,7 @@ import { CATEGORIES } from '@/helpers/constants'
 import Main from '@/views/Main.vue'
 import Maintenance from '@/views/Maintenance.vue'
 import Designs from '@/templates/Designs.vue'
+import Designer from '@/templates/Designer.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -27,6 +28,11 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           category: CATEGORIES['GRAPHIC DESIGN']
         }
+      },
+      {
+        path: 'designer',
+        name: 'designer',
+        component: Designer
       }
     ]
   },
