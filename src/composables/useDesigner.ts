@@ -27,7 +27,7 @@ export const useDesigner = () => {
         new Configuration({ basePath: process.env.VUE_APP_SERVER_HOST }),
       ).fetchDesigner()
     ).data;
-    preloadImage(designer.file);
+    preloadImage(designerResponse.file);
 
     (Object.keys(designerResponse) as (keyof DesignerResponse)[]).forEach((key) => {
       designer[key] = designerResponse[key]
