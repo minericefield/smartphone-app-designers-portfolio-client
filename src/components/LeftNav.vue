@@ -6,8 +6,10 @@
       v-for="sectionWords in sectionWordsList"
       :key="sectionWords.routeName"
       :section-words="sectionWords.sectionWords.value"
+      :class="{ current: sectionWords.isCurrentPage }"
       @on-click="$emit('on-section-click', sectionWords.routeName)"
     />
+    <!-- Too slow to render text color :style="{ color: sectionWords.isCurrentPage ? sectionWords.baseColor : 'rgba(0, 0, 0, .7)' }"  -->
 
     <teleport to="#overlay-1">
       <transition
@@ -63,7 +65,12 @@ export default defineComponent({
   ::v-deep(.section-words) {
     margin-bottom: 8rem;
     justify-content: flex-start;
-    cursor: pointer;
+    &.current {
+      cursor: initial;
+      .section-words_word {
+        color: inherit;
+      }
+    }
   }
   &_transition-overlay {
     position: fixed;

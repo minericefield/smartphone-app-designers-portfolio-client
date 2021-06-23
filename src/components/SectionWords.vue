@@ -38,6 +38,7 @@ export default defineComponent({
   justify-content: center;
   width: 100%;
   font-weight: bold;
+  cursor: pointer;
   &_word {
     color: rgba(0, 0, 0, .7);
     font-size: 3.2rem;
