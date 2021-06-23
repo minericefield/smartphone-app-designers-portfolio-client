@@ -115,7 +115,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .sp-designs-slick {
-  min-height: 80vw;
   transition: all 1.2s ease .1s;
   &_item {
     position: relative;
