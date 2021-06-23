@@ -67,9 +67,6 @@ export default defineComponent({
     justify-content: flex-start;
     &.current {
       cursor: initial;
-      .section-words_word {
-        color: inherit;
-      }
     }
   }
   &_transition-overlay {
