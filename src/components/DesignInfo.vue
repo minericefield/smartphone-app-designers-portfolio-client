@@ -76,6 +76,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .design-info {
+  overflow: auto;
   &_item {
     width: 100%;
     margin-bottom: .4rem;

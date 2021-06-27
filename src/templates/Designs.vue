@@ -110,7 +110,6 @@ export default defineComponent({
     width: 24%;
     max-width: 32%;
     max-height: 18%;
-    overflow: auto;
   }
 }
 
