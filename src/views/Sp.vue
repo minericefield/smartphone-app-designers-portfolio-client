@@ -158,7 +158,7 @@ export default defineComponent({
   // transform: scale(.9);
 }
 .sp-fade-enter-active {
-  transition: opacity .6s ease 0s;
+  transition: opacity .6s ease;
 }
 
 @keyframes blured {

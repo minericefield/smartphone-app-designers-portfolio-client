@@ -14,7 +14,7 @@
 
 .slick-slide {
   margin: 0 1.6rem;
-  transition: transform .4s ease 0s;
+  transition: transform .4s ease;
 }
 
 .slick-slide > div {
@@ -24,7 +24,7 @@
 
 .slick-slide,
 .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
-  transition: transform .4s ease 0s;
+  transition: transform .4s ease;
 }
 
 .slick-center,

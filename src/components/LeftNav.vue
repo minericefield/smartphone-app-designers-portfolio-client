@@ -105,10 +105,10 @@ export default defineComponent({
   opacity: 0;
 }
 .left-nav_transition-overlay-fade-enter-active {
-  transition: transform ease .8s 0s, opacity ease-in .4s 0s;
+  transition: transform .8s ease, opacity .4s ease-in;
 }
 .left-nav_transition-overlay-fade-leave-active {
-  transition: opacity ease .4s 0s;
+  transition: opacity .4s ease;
 }
 .left-nav_sections_line-fade-enter-from,
 .left-nav_sections_line-fade-leave-to {
@@ -116,7 +116,7 @@ export default defineComponent({
 }
 .left-nav_sections_line-fade-enter-active,
 .left-nav_sections_line-fade-leave-active {
-  transition: transform ease .4s .8s;
+  transition: transform .4s ease .8s;
 }
 .left-nav_sections_line-fade-leave-active {
   transition-delay: 0s;

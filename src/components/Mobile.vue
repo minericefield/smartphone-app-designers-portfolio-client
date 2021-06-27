@@ -60,6 +60,6 @@ export default defineComponent({
 }
 .mobile_shadow-fade-enter-active,
 .mobile_shadow-fade-leave-active {
-  transition: opacity .4s ease 0s;
+  transition: opacity .4s ease;
 }
 </style>

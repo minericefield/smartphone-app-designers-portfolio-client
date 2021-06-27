@@ -86,7 +86,7 @@ export default defineComponent({
       top: 0;
       height: 100%;
       width: 100%;
-      transition: transform .8s ease 0s;
+      transition: transform .8s ease;
     }
   }
   &_slide {
