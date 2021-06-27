@@ -2,12 +2,23 @@
   <div
     class="left-nav"
   >
-    <section-words
+    <div
       v-for="sectionWords in sectionWordsList"
       :key="sectionWords.routeName"
-      :section-words="sectionWords.sectionWords.value"
-      @on-click="$emit('on-section-click', sectionWords.routeName)"
-    />
+      class="left-nav_sections"
+      @click="$emit('on-section-click', sectionWords.routeName)"
+    >
+      <section-words
+        :section-words="sectionWords.sectionWords.value"
+        :class="{ current: sectionWords.isCurrentPage }"
+      />
+      <transition name="left-nav_sections_line-fade" appear>
+        <div
+          v-show="sectionWords.isCurrentPage"
+          class="left-nav_sections_line"
+        />
+      </transition>
+    </div>
 
     <teleport to="#overlay-1">
       <transition
@@ -60,10 +71,23 @@ export default defineComponent({
   flex-direction: column;
   justify-content: center;
   padding-left: 4rem;
-  ::v-deep(.section-words) {
+  &_sections {
+    align-self: flex-start;
     margin-bottom: 8rem;
-    justify-content: flex-start;
-    cursor: pointer;
+    ::v-deep(.section-words) {
+      padding: 0 1rem;
+      &.current {
+        cursor: initial;
+      }
+    }
+    &_line {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      background-color: rgba(0, 0, 0, .7);
+      height: 3px;
+      border-radius: 100%;
+    }
   }
   &_transition-overlay {
     position: fixed;
@@ -81,9 +105,20 @@ export default defineComponent({
   opacity: 0;
 }
 .left-nav_transition-overlay-fade-enter-active {
-  transition: transform ease .8s 0s, opacity ease-in .4s 0s;
+  transition: transform .8s ease, opacity .4s ease-in;
 }
 .left-nav_transition-overlay-fade-leave-active {
-  transition: opacity ease .4s 0s;
+  transition: opacity .4s ease;
+}
+.left-nav_sections_line-fade-enter-from,
+.left-nav_sections_line-fade-leave-to {
+  transform: scaleX(0);
+}
+.left-nav_sections_line-fade-enter-active,
+.left-nav_sections_line-fade-leave-active {
+  transition: transform .4s ease .8s;
+}
+.left-nav_sections_line-fade-leave-active {
+  transition-delay: 0s;
 }
 </style>

@@ -12,7 +12,8 @@ import { Designer } from '@/composables/useDesigner'
 export type SectionWords = {
   routeName: MAIN_ROUTE_NAMES,
   sectionWords: Ref<SectionWord[]>,
-  baseColor: string
+  baseColor: string,
+  isCurrentPage: boolean
 }
 
 export const useLeftNav = (
@@ -25,27 +26,30 @@ export const useLeftNav = (
     designer: MAIN_ROUTE_NAMES
   }
 ) => {
+  const router = useRouter()
+  const route = useRoute()
   const sectionWordsList = computed<SectionWords[]>(() => {
     return [
       {
         routeName: routeNames.graphicDesigns,
         sectionWords: graphicDesigns.sectionWords,
-        baseColor: graphicDesigns.displayedDesign.value.baseColor
+        baseColor: graphicDesigns.displayedDesign.value.baseColor,
+        isCurrentPage: route.name === routeNames.graphicDesigns
       },
       {
         routeName: routeNames.uiDesigns,
         sectionWords: uiDesigns.sectionWords,
-        baseColor: uiDesigns.displayedDesign.value.baseColor
+        baseColor: uiDesigns.displayedDesign.value.baseColor,
+        isCurrentPage: route.name === routeNames.uiDesigns
       },
       {
         routeName: routeNames.designer,
         sectionWords: designer.sectionWords,
-        baseColor: designer.designer.baseColor
+        baseColor: designer.designer.baseColor,
+        isCurrentPage: route.name === routeNames.designer
       }
     ]
   })
-  const router = useRouter()
-  const route = useRoute()
 
   const isTransitionOverlayVisible = ref(false)
   const transitTo = ref('')

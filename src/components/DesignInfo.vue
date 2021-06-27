@@ -59,6 +59,7 @@ import { defineComponent, PropType } from 'vue'
 import { Design } from 'smartphone-app-designers-portfolio-api-docs/client'
 
 export default defineComponent({
+  name: 'DesignInfo',
   props: {
     design: {
       type: Object as PropType<Design>,
@@ -80,7 +81,7 @@ export default defineComponent({
     margin-bottom: .4rem;
     color: #fff;
     font-size: 1.8rem;
-    transition: all .4s ease 0s;
+    transition: all .4s ease;
     &.title {
       font-size: 2.8rem;
       font-weight: bold;

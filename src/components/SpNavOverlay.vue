@@ -157,14 +157,14 @@ export default defineComponent({
 }
 .sp-nav-overlay-fade-enter-active,
 .sp-nav-overlay-fade-leave-active {
-  transition: transform .4s ease 0s;
+  transition: transform .4s ease;
 }
 
 .sp-nav-overlay_bg-fade-enter-from {
   opacity: 0;
 }
 .sp-nav-overlay_bg-fade-enter-active {
-  transition: opacity .4s ease 0s;
+  transition: opacity .4s ease;
 }
 .sp-nav-overlay_bg-fade-enter-to {
   opacity: .4;
