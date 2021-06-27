@@ -1,7 +1,7 @@
 <template>
   <teleport to="#overlay-1">
     <div class="opening">
-      <lottie :options="options" @animCreated="animCreated" />
+      <lottie :options="options" @anim-created="animCreated" />
     </div>
   </teleport>
 </template>
@@ -18,6 +18,7 @@ export default defineComponent({
   components: {
     Lottie
   },
+  emits: ['on-complete'],
   setup (_, ctx) {
     const options = reactive({
       animationData: opening,
