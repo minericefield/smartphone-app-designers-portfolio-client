@@ -9,7 +9,7 @@
       @click="$emit('on-section-click', sectionWords.routeName)"
     >
       <section-words
-        :section-words="sectionWords.sectionWords.value"
+        :section-words="sectionWords.sectionWords"
         :class="{ current: sectionWords.isCurrentPage }"
       />
       <transition name="left-nav_sections_line-fade" appear>
