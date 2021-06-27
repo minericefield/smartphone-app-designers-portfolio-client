@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { mount, MountResult } from 'vue-composable-tester'
 
-import { useSectionWords } from '../../src/composables/useSectionWords'
+import { useSectionWords } from '@/composables/useSectionWords'
 
 describe('Use Designs', () => {
   let sectionWords: MountResult<ReturnType<typeof useSectionWords>>

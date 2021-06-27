@@ -3,7 +3,7 @@ import { shallowMount } from '@vue/test-utils'
 
 import { sectionWordsList as sectionWordsListMock } from '../../test/mocks/sectionWordsList'
 
-import LeftNav from '../../src/components/LeftNav.vue'
+import LeftNav from '@/components/LeftNav.vue'
 
 describe('LeftNav', () => {
   // https://www.reddit.com/r/vuejs/comments/k9d4zv/is_the_type_of_the_argument_to_vuewrapper_a/

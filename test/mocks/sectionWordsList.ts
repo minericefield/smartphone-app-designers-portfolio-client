@@ -1,6 +1,6 @@
-import { MAIN_ROUTE_NAMES } from '../../src/helpers/constants'
+import { MAIN_ROUTE_NAMES } from '@/helpers/constants'
 
-import { SectionWords } from '../../src/composables/useLeftNav'
+import { SectionWords } from '@/composables/useLeftNav'
 
 export const sectionWordsList: SectionWords[] = [
   {

@@ -5,7 +5,7 @@ import { designs as designsMock } from '../../test/mocks/designs'
 
 import { CATEGORIES } from '@/helpers/constants'
 
-import { useDesigns } from '../../src/composables/useDesigns'
+import { useDesigns } from '@/composables/useDesigns'
 
 jest.mock('axios');
 
