@@ -103,13 +103,13 @@ export default defineComponent({
       }
       &.description-heading,
       &.description {
-        text-align: left;
         word-break: break-word;
         color: rgba(0, 0, 0, .6);
       }
       &.description {
         font-size: 1.4rem;
         color: rgba(0, 0, 0, .6);
+        text-align: left;
       }
     }
   }

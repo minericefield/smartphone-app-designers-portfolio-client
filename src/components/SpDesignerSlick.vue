@@ -149,18 +149,15 @@ export default defineComponent({
       }
       &.description-heading,
       &.description {
-        text-align: left;
         word-break: break-word;
         color: rgba(0, 0, 0, .6);
       }
       &.description {
         font-size: 1.2rem;
         color: rgba(0, 0, 0, .6);
+        text-align: left;
       }
     }
-  }
-  ::v-deep(.slick-track) {
-    transform: translate3d(0, 0, 0) !important;
   }
 }
 
