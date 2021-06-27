@@ -1,7 +1,7 @@
 <template>
   <div
     class="designs"
-    @wheel.prevent="slideWheel"
+    v-prevent-horizontally-wheeling="{ horizontalCallback: slideWheel }"
   >
     <bg-behind :content="displayedDesign" />
     <div class="designs_image_wrap">
@@ -110,7 +110,6 @@ export default defineComponent({
     width: 24%;
     max-width: 32%;
     max-height: 18%;
-    overflow: auto;
   }
 }
 

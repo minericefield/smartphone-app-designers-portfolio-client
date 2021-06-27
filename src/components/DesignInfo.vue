@@ -1,7 +1,7 @@
 <template>
   <div
     class="design-info"
-    @wheel.stop
+    v-prevent-horizontally-wheeling
   >
     <transition
       :name="`design-info_item-fade-${slideDirection}`"
@@ -76,6 +76,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .design-info {
+  overflow: auto;
   &_item {
     width: 100%;
     margin-bottom: .4rem;

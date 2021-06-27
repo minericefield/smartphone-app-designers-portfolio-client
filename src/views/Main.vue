@@ -1,7 +1,7 @@
 <template>
   <div
     class="main"
-    @wheel.prevent.stop
+    v-prevent-horizontally-wheeling
   >
     <router-view v-slot="{ Component }">
       <transition name="main_content-fade" appear>
