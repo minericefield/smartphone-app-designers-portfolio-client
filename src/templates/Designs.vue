@@ -1,7 +1,7 @@
 <template>
   <div
     class="designs"
-    @wheel.prevent="slideWheel"
+    v-prevent-horizontally-wheeling="{ horizontalCallback: slideWheel }"
   >
     <bg-behind :content="displayedDesign" />
     <div class="designs_image_wrap">

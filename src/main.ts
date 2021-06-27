@@ -5,5 +5,6 @@ import router from './router'
 import store from './store'
 
 import './plugins/normalize'
+import { preventHorizontallyWheeling } from './plugins/preventHorizontallyWheeling'
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).use(store).use(router).use(preventHorizontallyWheeling).mount('#app')

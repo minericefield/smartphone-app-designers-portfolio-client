@@ -1,7 +1,7 @@
 <template>
   <div
     class="design-info"
-    @wheel.stop
+    v-prevent-horizontally-wheeling
   >
     <transition
       :name="`design-info_item-fade-${slideDirection}`"

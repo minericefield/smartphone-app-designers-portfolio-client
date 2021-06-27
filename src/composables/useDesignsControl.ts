@@ -34,9 +34,9 @@ export const useDesignsControl = (designs: Ref<Design[]>) => {
   }
 
   const slideWheel = (event: WheelEvent) => {
-    if (event.deltaX > 0 && event.deltaX > event.deltaY) {
+    if (event.deltaX > 0) {
       slide('right')
-    } else if (event.deltaX < 0 && event.deltaX < event.deltaY) {
+    } else {
       slide('left')
     }
   }
