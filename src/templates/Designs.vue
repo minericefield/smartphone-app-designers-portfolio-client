@@ -1,7 +1,7 @@
 <template>
   <div
     class="designs"
-    @wheel="slideWheel"
+    @wheel.prevent="slideWheel"
   >
     <bg-behind :content="displayedDesign" />
     <div class="designs_image_wrap">

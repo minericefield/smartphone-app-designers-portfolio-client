@@ -1,7 +1,7 @@
 <template>
   <div
-    @wheel="preventWheeling"
     class="main"
+    @wheel.prevent.stop
   >
     <router-view v-slot="{ Component }">
       <transition name="main_content-fade" appear>
@@ -59,12 +59,6 @@ export default defineComponent({
     )
     const route = useRoute()
 
-    const preventOnWheeling = (event: WheelEvent) => {
-      if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
-        return event.preventDefault()
-      }
-    }
-
     return {
       sectionWordsList,
       isTransitionOverlayVisible,
@@ -72,8 +66,7 @@ export default defineComponent({
       route,
 
       prepareTransition,
-      transit,
-      preventOnWheeling
+      transit
     }
   }
 })
