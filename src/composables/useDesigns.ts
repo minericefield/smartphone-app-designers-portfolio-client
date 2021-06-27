@@ -5,6 +5,7 @@ import {
 } from 'smartphone-app-designers-portfolio-api-docs/client'
 import { ref, computed } from 'vue'
 
+import { changeOpacity } from '@/helpers/colorOpacity'
 import { CategoriesValue } from '@/helpers/constants'
 import { preloadImage } from '@/helpers/preload'
 
@@ -22,13 +23,9 @@ export const useDesigns = () => {
       preloadImage(design.file)
     })
     designs.value = designsResponse.map(design => {
-      const red = parseInt(design.baseColor.substring(1, 3), 16)
-      const green = parseInt(design.baseColor.substring(3, 5), 16)
-      const blue = parseInt(design.baseColor.substring(5, 7), 16)
-      const alpha = '.5'
       return {
         ...design,
-        baseColor: 'rgba(' + Object.values([red, green, blue, alpha]).join(',') +')'
+        baseColor: changeOpacity(design.baseColor)
       }
     })
   }

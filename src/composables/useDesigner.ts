@@ -5,6 +5,7 @@ import {
 } from 'smartphone-app-designers-portfolio-api-docs/client'
 import { reactive, computed, InjectionKey } from 'vue'
 
+import { changeOpacity } from '@/helpers/colorOpacity'
 import { preloadImage } from '@/helpers/preload'
 import { useDesignerSectionWords } from '@/composables/useDesignerSectionWords'
 
@@ -32,6 +33,7 @@ export const useDesigner = () => {
     (Object.keys(designerResponse) as (keyof DesignerResponse)[]).forEach((key) => {
       designer[key] = designerResponse[key]
     })
+    designer.baseColor = changeOpacity(designer.baseColor)
   } 
 
   return {
