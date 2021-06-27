@@ -1,4 +1,4 @@
-import { computed, ref, Ref } from 'vue'
+import { computed, ref, unref } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 
 import { SectionWord } from '@/types/SectionWord'
@@ -11,7 +11,7 @@ import { Designer } from '@/composables/useDesigner'
 
 export type SectionWords = {
   routeName: MAIN_ROUTE_NAMES,
-  sectionWords: Ref<SectionWord[]>,
+  sectionWords: SectionWord[],
   baseColor: string,
   isCurrentPage: boolean
 }
@@ -32,19 +32,19 @@ export const useLeftNav = (
     return [
       {
         routeName: routeNames.graphicDesigns,
-        sectionWords: graphicDesigns.sectionWords,
+        sectionWords: unref(graphicDesigns.sectionWords),
         baseColor: graphicDesigns.displayedDesign.value.baseColor,
         isCurrentPage: route.name === routeNames.graphicDesigns
       },
       {
         routeName: routeNames.uiDesigns,
-        sectionWords: uiDesigns.sectionWords,
+        sectionWords: unref(uiDesigns.sectionWords),
         baseColor: uiDesigns.displayedDesign.value.baseColor,
         isCurrentPage: route.name === routeNames.uiDesigns
       },
       {
         routeName: routeNames.designer,
-        sectionWords: designer.sectionWords,
+        sectionWords: unref(designer.sectionWords),
         baseColor: designer.designer.baseColor,
         isCurrentPage: route.name === routeNames.designer
       }
