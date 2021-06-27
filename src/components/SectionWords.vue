@@ -4,14 +4,14 @@
     @click="$emit('on-click')"
   >
     <transition-group name="section-words_word-fade" appear>
-      <span
+      <p
         v-for="(sectionWord, index) in sectionWords"
         :key="`${sectionWord.word}_${index}`"
         :style="sectionWord.additionalStyles"
         class="section-words_word"
       >
         {{ sectionWord.word }}
-      </span>
+      </p>
     </transition-group>
   </div>
 </template>
