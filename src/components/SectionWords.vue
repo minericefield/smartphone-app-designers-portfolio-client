@@ -36,7 +36,6 @@ export default defineComponent({
 .section-words {
   display: flex;
   justify-content: center;
-  width: 100%;
   font-weight: bold;
   cursor: pointer;
   &_word {

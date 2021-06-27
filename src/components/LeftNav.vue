@@ -72,9 +72,10 @@ export default defineComponent({
   justify-content: center;
   padding-left: 4rem;
   &_sections {
+    align-self: flex-start;
     margin-bottom: 8rem;
     ::v-deep(.section-words) {
-      justify-content: flex-start;
+      padding: 0 1rem;
       &.current {
         cursor: initial;
       }
@@ -108,5 +109,16 @@ export default defineComponent({
 }
 .left-nav_transition-overlay-fade-leave-active {
   transition: opacity ease .4s 0s;
+}
+.left-nav_sections_line-fade-enter-from,
+.left-nav_sections_line-fade-leave-to {
+  transform: scaleX(0);
+}
+.left-nav_sections_line-fade-enter-active,
+.left-nav_sections_line-fade-leave-active {
+  transition: transform ease .4s .8s;
+}
+.left-nav_sections_line-fade-leave-active {
+  transition-delay: 0s;
 }
 </style>
