@@ -9419,9 +9419,9 @@ slick-carousel@^1.8.1:
   resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
   integrity sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==
 
-"smartphone-app-designers-portfolio-api-docs@git+https://github.com/minericefield/smartphone-app-designers-portfolio-api-docs.git#dev-0.1.0":
+"smartphone-app-designers-portfolio-api-docs@git+https://github.com/minericefield/smartphone-app-designers-portfolio-api-docs.git":
   version "0.1.0"
-  resolved "git+https://github.com/minericefield/smartphone-app-designers-portfolio-api-docs.git#9bc4580e9d2d9cc8dc3f897c87976f0e4342d850"
+  resolved "git+https://github.com/minericefield/smartphone-app-designers-portfolio-api-docs.git#366850df5771f6576b9f7553b0578002d70503ed"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
