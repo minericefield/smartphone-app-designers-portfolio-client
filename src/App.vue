@@ -1,12 +1,19 @@
 <template>
   <div class="app">
-    <opening
-      v-if="isOpeningVisible"
-      @on-complete="onOpeningComplete"
-    />
+    <teleport to="#overlay-1">
+      <opening
+        v-show="isOpeningVisible"
+        @on-complete="onOpeningComplete"
+      />
+    </teleport>
+
+    <!-- ↑ Only production bug. Teleport with v-if in root component behave strange  ↓ -->
 
     <template
-      v-else-if="[graphicDesigns, uiDesigns, designer].every(content => content.isAvailable.value)"
+      v-if="
+      !isOpeningVisible &&
+      [graphicDesigns, uiDesigns, designer].every(content => content.isAvailable.value)
+      "
     >
       <router-view v-if="!generals.shouldHandleAsSp.value" key="main" />
       <sp v-else key="sp" />
