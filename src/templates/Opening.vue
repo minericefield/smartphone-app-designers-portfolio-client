@@ -1,9 +1,7 @@
 <template>
-  <teleport to="#overlay-1">
-    <div class="opening">
-      <lottie :options="options" @anim-created="animCreated" />
-    </div>
-  </teleport>
+  <div class="opening">
+    <lottie :options="options" @anim-created="animCreated" />
+  </div>
 </template>
 
 <script lang="ts">
