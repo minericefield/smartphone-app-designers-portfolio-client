@@ -38,17 +38,19 @@ export default defineComponent({
   justify-content: center;
   font-weight: bold;
   cursor: pointer;
+
   &_word {
-    color: rgba(0, 0, 0, .7);
     font-size: 3.2rem;
+    color: rgba(0, 0, 0, 0.7);
   }
 }
 
 .section-words_word-fade-enter-from {
   opacity: 0;
-  transform: translateY(-1.2rem)
+  transform: translateY(-1.2rem);
 }
+
 .section-words_word-fade-enter-active {
-  transition: opacity .4s ease .1s, transform .4s ease .1s;
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
 }
 </style>

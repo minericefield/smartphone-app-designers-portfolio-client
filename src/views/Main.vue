@@ -76,6 +76,7 @@ export default defineComponent({
 .main {
   width: 100%;
   height: 100%;
+
   ::v-deep(.left-nav) {
     position: absolute;
     top: 0;
@@ -87,10 +88,12 @@ export default defineComponent({
 .main_content-fade-enter-from {
   opacity: 0;
 }
+
 .main_content-fade-enter-active {
-  transition: opacity .4s ease .4s;
+  transition: opacity 0.4s ease 0.4s;
 }
+
 .main_content-fade-leave-active {
-  transition-delay: .4s;
+  transition-delay: 0.4s;
 }
 </style>

@@ -71,24 +71,29 @@ export default defineComponent({
   flex-direction: column;
   justify-content: center;
   padding-left: 4rem;
+
   &_sections {
     align-self: flex-start;
     margin-bottom: 8rem;
+
     ::v-deep(.section-words) {
       padding: 0 1rem;
+
       &.current {
         cursor: initial;
       }
     }
+
     &_line {
       position: absolute;
-      width: 100%;
       top: 50%;
-      background-color: rgba(0, 0, 0, .7);
+      width: 100%;
       height: 3px;
+      background-color: rgba(0, 0, 0, 0.7);
       border-radius: 100%;
     }
   }
+
   &_transition-overlay {
     position: fixed;
     top: -160%;
@@ -97,27 +102,34 @@ export default defineComponent({
     height: 160%;
   }
 }
+
 .left-nav_transition-overlay-fade-enter-from {
-  opacity: .4;
+  opacity: 0.4;
   transform: translateY(320%);
 }
+
 .left-nav_transition-overlay-fade-leave-to {
   opacity: 0;
 }
+
 .left-nav_transition-overlay-fade-enter-active {
-  transition: transform .8s ease, opacity .4s ease-in;
+  transition: transform 0.8s ease, opacity 0.4s ease-in;
 }
+
 .left-nav_transition-overlay-fade-leave-active {
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
 }
+
 .left-nav_sections_line-fade-enter-from,
 .left-nav_sections_line-fade-leave-to {
   transform: scaleX(0);
 }
+
 .left-nav_sections_line-fade-enter-active,
 .left-nav_sections_line-fade-leave-active {
-  transition: transform .4s ease .8s;
+  transition: transform 0.4s ease 0.8s;
 }
+
 .left-nav_sections_line-fade-leave-active {
   transition-delay: 0s;
 }

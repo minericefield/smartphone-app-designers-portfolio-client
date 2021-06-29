@@ -45,13 +45,14 @@ export default defineComponent({
   &_file {
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
-    margin: 0 auto;
+    left: 0;
     height: 100%;
-    filter: blur(.2rem);
+    margin: 0 auto;
+    filter: blur(0.2rem);
     transform: scale(4);
   }
+
   &_screen {
     position: absolute;
     top: 0;
@@ -65,8 +66,9 @@ export default defineComponent({
 .bg-behind-image-fade-leave-to {
   opacity: 0;
 }
+
 .bg-behind-image-fade-enter-active,
 .bg-behind-image-fade-leave-active {
-  transition: opacity .8s ease 0s;
+  transition: opacity 0.8s ease 0s;
 }
 </style>

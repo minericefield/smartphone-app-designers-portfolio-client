@@ -11,32 +11,36 @@
 <style lang="scss" scoped>
 .ham-menu {
   &_content {
-    height: 3.2rem;
-    width: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 4rem;
+    height: 3.2rem;
     cursor: pointer;
+
     &_item {
-      height: .4rem;
       width: 100%;
+      height: 0.4rem;
       background-color: #9864f6;
-      animation-fill-mode: both;
       border-radius: 2rem;
+      animation-fill-mode: both;
+
       &.first {
         animation-name: first-fade;
-        animation-duration: .4s;
-        animation-delay: .3s;
+        animation-duration: 0.4s;
+        animation-delay: 0.3s;
       }
+
       &.second {
         animation-name: second-fade;
-        animation-duration: .4s;
-        animation-delay: .4s;
+        animation-duration: 0.4s;
+        animation-delay: 0.4s;
       }
+
       &.third {
         animation-name: third-fade;
-        animation-duration: .6s;
-        animation-delay: .3s;
+        animation-duration: 0.6s;
+        animation-delay: 0.3s;
       }
     }
   }
@@ -46,28 +50,35 @@
   0% {
     width: 0%;
   }
+
   100% {
     width: 100%;
   }
 }
+
 @keyframes second-fade {
   0% {
     width: 0%;
   }
+
   50% {
     width: 100%;
   }
+
   100% {
     width: 75%;
   }
 }
+
 @keyframes third-fade {
   0% {
     width: 0%;
   }
+
   50% {
     width: 100%;
   }
+
   100% {
     width: 50%;
   }
