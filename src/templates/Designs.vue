@@ -62,47 +62,55 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .designs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+
   ::v-deep(.bg-behind) {
     position: absolute;
     top: 0;
     left: 0;
   }
+
   &_image_wrap {
     position: absolute;
     top: 17%;
     width: 35vh;
     height: 61.3%;
     overflow: hidden;
+
     &_image {
       position: absolute;
       top: 0;
-      height: 100%;
       width: 100%;
-      transition: transform .8s ease;
+      height: 100%;
+      transition: transform 0.8s ease;
     }
   }
+
   &_slide {
     height: 5.6%;
     cursor: pointer;
+
     &.left {
       margin-right: 4.4vh;
     }
+
     &.right {
       margin-left: 4.4vh;
     }
   }
+
   ::v-deep(.mobile) {
     height: 78%;
     border-radius: 5vh;
   }
+
   ::v-deep(.design-info) {
     position: fixed;
     top: 72%;
@@ -117,6 +125,7 @@ export default defineComponent({
 .designs_image_wrap-fade-right-leave-to {
   transform: translateX(100%);
 }
+
 .designs_image_wrap-fade-right-enter-from,
 .designs_image_wrap-fade-left-leave-to {
   transform: translateX(-100%);

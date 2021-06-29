@@ -26,27 +26,30 @@ export default defineComponent({
   width: 100%;
   // height: 7rem;
   padding: 1.6rem;
+
   &_logo {
     height: 4rem;
     animation-name: fade;
-    animation-duration: .6s;
+    animation-duration: 0.6s;
     animation-fill-mode: both;
-    animation-delay: .2s;
+    animation-delay: 0.2s;
   }
 }
 
 @keyframes fade {
   0% {
+    height: 4rem;
     opacity: 0;
-    height: 4rem;
   }
+
   50% {
-    opacity: 1;
     height: 4.6rem;
-  }
-  100% {
     opacity: 1;
+  }
+
+  100% {
     height: 4rem;
+    opacity: 1;
   }
 }
 </style>

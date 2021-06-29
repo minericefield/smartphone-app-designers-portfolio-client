@@ -59,19 +59,26 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .designer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+
   ::v-deep(.bg-behind) {
     position: absolute;
     top: 0;
     left: 0;
   }
+
+  ::v-deep(.mobile) {
+    height: 78%;
+    border-radius: 5vh;
+  }
+
   &_content {
     position: absolute;
     top: 17%;
@@ -79,10 +86,12 @@ export default defineComponent({
     height: 61.3%;
     padding: 2rem;
     overflow: auto;
+
     &_item {
       margin-bottom: 1rem;
-      text-align: center;
       font-size: 2rem;
+      text-align: center;
+
       &.file {
         display: block;
         width: 64%;
@@ -90,32 +99,32 @@ export default defineComponent({
         margin-bottom: 2rem;
         border-radius: 100%;
       }
+
       &.name {
         font-size: 3.2rem;
-        color: rgba(0, 0, 0, .8);
+        color: rgba(0, 0, 0, 0.8);
         word-break: break-word;
       }
+
       &.email {
         ::v-deep(.mail) {
-          margin-top: .4rem; // TODO: Fix svg
+          margin-top: 0.4rem; // TODO: Fix svg
           vertical-align: middle;
         }
       }
+
       &.description-heading,
       &.description {
+        color: rgba(0, 0, 0, 0.6);
         word-break: break-word;
-        color: rgba(0, 0, 0, .6);
       }
+
       &.description {
         font-size: 1.4rem;
-        color: rgba(0, 0, 0, .6);
+        color: rgba(0, 0, 0, 0.6);
         text-align: left;
       }
     }
-  }
-  ::v-deep(.mobile) {
-    height: 78%;
-    border-radius: 5vh;
   }
 }
 </style>

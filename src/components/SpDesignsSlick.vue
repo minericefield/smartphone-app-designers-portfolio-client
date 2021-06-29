@@ -115,31 +115,38 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .sp-designs-slick {
-  transition: all 1.2s ease .1s;
+  transition: all 1.2s ease 0.1s;
+
   &_item {
     position: relative;
     border-radius: 2rem;
+
     &_file {
       width: 100%;
       border-radius: 2rem;
     }
+
     &_info {
       position: absolute;
       bottom: 0;
       width: 100%;
       height: 32%;
-      border-radius: 0 0 2rem 2rem;
       overflow: auto;
+      border-radius: 0 0 2rem 2rem;
       opacity: 0;
-      transform: translateY(.8rem);
-      transition: opacity .4s ease .2s, transform .4s ease .1s;
+      transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.1s;
+      transform: translateY(0.8rem);
+
       &_texts {
-        padding: .4rem;
+        padding: 0.4rem;
+
         &_item {
           color: #fff;
+
           &.title-heading {
             font-size: 1.4rem;
           }
+
           &.title {
             font-size: 2rem;
           }

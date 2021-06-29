@@ -107,13 +107,14 @@ export default defineComponent({
 @mixin blured() {
   animation-name: blured;
   animation-fill-mode: forwards;
-  animation-duration: .6s;
-  animation-delay: .1s;
+  animation-duration: 0.6s;
+  animation-delay: 0.1s;
 }
+
 @mixin blur-released() {
   animation-name: blur-released;
   animation-fill-mode: backwards;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
 }
 
 .sp {
@@ -123,29 +124,36 @@ export default defineComponent({
     left: 0;
     z-index: 99;
     overflow-x: hidden;
+
     &.blured {
       .ham-menu {
-        @include blured(); 
+        @include blured();
       }
     }
+
     &.blur-released {
       .ham-menu {
-        @include blur-released(); 
+        @include blur-released();
       }
     }
   }
+
   &_contents {
     &.blured {
-      @include blured(); 
+      @include blured();
+
       overflow: hidden;
     }
+
     &.blur-released {
-      @include blur-released(); 
+      @include blur-released();
     }
+
     &_main {
-      margin-top: 7.2rem;
       padding-bottom: 7.2rem;
+      margin-top: 7.2rem;
       overflow-x: hidden;
+
       ::v-deep(.sp-designs, .sp-designer) {
         margin-bottom: 4rem;
       }
@@ -157,19 +165,22 @@ export default defineComponent({
   opacity: 0;
   // transform: scale(.9);
 }
+
 .sp-fade-enter-active {
-  transition: opacity .6s ease;
+  transition: opacity 0.6s ease;
 }
 
 @keyframes blured {
   100% {
-    filter: blur(.8rem);
+    filter: blur(0.8rem);
   }
 }
+
 @keyframes blur-released {
   0% {
-    filter: blur(.8rem);
+    filter: blur(0.8rem);
   }
+
   100% {
     filter: blur(0);
   }

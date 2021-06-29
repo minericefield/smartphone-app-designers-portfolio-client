@@ -120,41 +120,48 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .sp-designer-slick {
-  transition: all 1.2s ease .1s;
+  transition: all 1.2s ease 0.1s;
+
   &_item {
     position: relative;
     padding: 1.6rem;
-    border-radius: 2rem;
     background-color: #fff;
+    border-radius: 2rem;
+
     &_content {
-      margin-bottom: .4rem;
-      text-align: center;
+      margin-bottom: 0.4rem;
       font-size: 1.4rem;
+      text-align: center;
+
       &.file {
         width: 64%;
         margin: 0 auto;
         margin-bottom: 1.6rem;
         border-radius: 100%;
       }
+
       &.name {
         font-size: 2rem;
-        color: rgba(0, 0, 0, .8);
+        color: rgba(0, 0, 0, 0.8);
         word-break: break-word;
       }
+
       &.email {
         ::v-deep(.mail) {
-          margin-top: .4rem; // TODO: Fix svg
+          margin-top: 0.4rem; // TODO: Fix svg
           vertical-align: middle;
         }
       }
+
       &.description-heading,
       &.description {
+        color: rgba(0, 0, 0, 0.6);
         word-break: break-word;
-        color: rgba(0, 0, 0, .6);
       }
+
       &.description {
         font-size: 1.2rem;
-        color: rgba(0, 0, 0, .6);
+        color: rgba(0, 0, 0, 0.6);
         text-align: left;
       }
     }

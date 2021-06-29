@@ -44,6 +44,7 @@ export default defineComponent({
     height: 100%;
     border-radius: inherit;
   }
+
   &_shadow {
     position: absolute;
     top: 0;
@@ -56,10 +57,11 @@ export default defineComponent({
 
 .mobile_shadow-fade-enter-from,
 .mobile_shadow-fade-leave-to {
-  opacity: .1;
+  opacity: 0.1;
 }
+
 .mobile_shadow-fade-enter-active,
 .mobile_shadow-fade-leave-active {
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
 }
 </style>

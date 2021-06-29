@@ -68,28 +68,31 @@ export default defineComponent({
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 199;
   width: 100%;
   height: 100%;
-  z-index: 199;
+
   &_bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #7C21D7;
-    opacity: .4;
+    background-color: #7c21d7;
+    opacity: 0.4;
   }
+
   &_main {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
     &_arrow {
       position: absolute;
       top: 2rem;
@@ -97,53 +100,59 @@ export default defineComponent({
       width: 5.6rem;
       height: 5.6rem;
       overflow: hidden;
-      opacity: .8;
+      opacity: 0.8;
+
       &_item {
         position: absolute;
         top: 0;
         left: 0;
-        height: 100%;
         width: 100%;
+        height: 100%;
         overflow: hidden;
         $this: &;
+
         &_line {
           position: absolute;
           top: 2.4rem;
           left: 0;
           width: 64%;
-          height: .4rem;
-          border-radius: 20rem;
+          height: 0.4rem;
           background-color: #fff;
-
+          border-radius: 20rem;
           animation-name: arrow-fade;
+          animation-duration: 0.2s;
+          animation-delay: 0.6s;
           animation-fill-mode: both;
-          animation-duration: .2s;
-          animation-delay: .6s;
         }
+
         &.top {
           #{$this}_line {
+            top: 0.6rem;
+            left: -0.8rem;
             transform: rotate(-45deg);
-            top: .6rem;
-            left: -.8rem;
           }
         }
+
         &.middle {
           #{$this}_line {
             width: 80%;
-            animation-delay: .4s;
+            animation-delay: 0.4s;
           }
         }
+
         &.bottom {
           #{$this}_line {
-            transform: rotate(45deg);
             top: 4.4rem;
-            left: -.8rem;
+            left: -0.8rem;
+            transform: rotate(45deg);
           }
         }
       }
     }
+
     ::v-deep(.section-words) {
       padding: 3.2rem 0 7.2rem;
+
       .section-words_word {
         color: #fff;
       }
@@ -155,25 +164,29 @@ export default defineComponent({
 .sp-nav-overlay-fade-leave-to {
   transform: translateX(-100%);
 }
+
 .sp-nav-overlay-fade-enter-active,
 .sp-nav-overlay-fade-leave-active {
-  transition: transform .4s ease;
+  transition: transform 0.4s ease;
 }
 
 .sp-nav-overlay_bg-fade-enter-from {
   opacity: 0;
 }
+
 .sp-nav-overlay_bg-fade-enter-active {
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
 }
+
 .sp-nav-overlay_bg-fade-enter-to {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 @keyframes arrow-fade {
   0% {
     width: 0%;
   }
+
   100% {
     width: 100%;
   }

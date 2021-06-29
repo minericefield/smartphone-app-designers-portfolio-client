@@ -68,9 +68,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
-@import './styles/';
-
+<style lang="scss" scoped>
 .app {
   width: 100%;
   height: 100%;

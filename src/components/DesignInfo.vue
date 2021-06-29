@@ -21,7 +21,7 @@
     >
       <div
         :key="`title_${design._id}`"
-        :style="{ transitionDelay: '.2s' }"
+        :style="{ transitionDelay: '.3s' }"
         class="design-info_item title"
       >
         {{ design.title }}
@@ -33,7 +33,7 @@
     >
       <div
         :key="`description-heading_${design._id}`"
-        :style="{ transitionDelay: '.3s'}"
+        :style="{ transitionDelay: '.5s'}"
         class="design-info_item description-heading"
       >
         {{ design.descriptionHeading }}
@@ -45,7 +45,7 @@
     >
       <div
         :key="'description_'  + design._id"
-        :style="{ transitionDelay: '.4s' }"
+        :style="{ transitionDelay: '.7s' }"
         class="design-info_item description"
       >
         {{ design.description }}
@@ -77,16 +77,19 @@ export default defineComponent({
 <style lang="scss" scoped>
 .design-info {
   overflow: auto;
+
   &_item {
     width: 100%;
-    margin-bottom: .4rem;
-    color: #fff;
+    margin-bottom: 0.4rem;
     font-size: 1.8rem;
-    transition: all .4s ease;
+    color: #fff;
+    transition: all 0.4s ease;
+
     &.title {
       font-size: 2.8rem;
       font-weight: bold;
     }
+
     &.description {
       margin-bottom: 0;
     }
@@ -94,16 +97,23 @@ export default defineComponent({
 }
 
 .design-info_item-fade-left-enter-from {
+  opacity: 0;
   transform: translateX(-2.4rem);
-  opacity: 0;
 }
+
 .design-info_item-fade-right-enter-from {
-  transform: translateX(2.4rem);
   opacity: 0;
+  transform: translateX(2.4rem);
 }
+
 .design-info_item-fade-left-leave-to,
 .design-info_item-fade-right-leave-to {
-  transform: translateY(.4rem);
   opacity: 0;
+  transform: translateY(0.8rem);
+}
+
+.design-info_item-fade-left-leave-active,
+.design-info_item-fade-right-leave-active {
+  transition-delay: 0s !important;
 }
 </style>

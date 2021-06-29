@@ -33,6 +33,7 @@ export default defineComponent({
 .bg-behind {
   width: 100%;
   height: 100%;
+
   ::v-deep(.bg-rect) {
     position: absolute;
     top: 0;
@@ -40,6 +41,7 @@ export default defineComponent({
     width: 100%;
     height: 64%;
   }
+
   ::v-deep(.bg-behind-image) {
     width: 100%;
     height: 100%;
