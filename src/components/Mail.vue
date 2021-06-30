@@ -1,5 +1,5 @@
 <template>
-  <svg class="mail-icon" width="15" height="11" viewBox="0 0 15 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg class="mail" width="15" height="11" viewBox="0 0 15 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>icn_mail</title>
     <desc>Created with Sketch.</desc>
     <g id="【デザイン】これ使ってください" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
