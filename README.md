@@ -1,29 +1,33 @@
 # smartphone-app-designers-portfolio-client
 
-## Project setup
-```
-yarn install
-```
+Learning theme of NestJS.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Development
 
-### Compiles and minifies for production
-```
-yarn build
-```
+#### API
+1. `$ git clone https://github.com/minericefield/smartphone-app-designers-portfolio-server`
+2. `$ cd smartphone-app-designers-portfolio-server`
+3. `$ docker-compose up -d --build`
+4. `$ docker-compose run --rm server yarn seed:dev`
 
-### Run your unit tests
-```
-yarn test:unit
-```
+#### Client
+1. `$ git clone https://github.com/minericefield/smartphone-app-designers-portfolio-client`
+2. `$ cd smartphone-app-designers-portfolio-client`
+3. `$ yarn install`
+4. `$ yarn serve`
+5. Access to `http://localhost:8080`
 
-### Lints and fixes files
-```
-yarn lint
-```
+#### Login to Admin Console
+1. Access to `http://localhost:3000`
+2. You can login with
+    - Email: `admin@example.com`
+    - Password: `Password1234_`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Features
+- Display designs added by Admin Console.
+- Invite new admin with authority.
+
+## Cores
+- Vue3
+- Composition api
+- NestJS

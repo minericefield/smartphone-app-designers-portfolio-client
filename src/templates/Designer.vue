@@ -108,7 +108,6 @@ export default defineComponent({
 
       &.email {
         ::v-deep(.mail) {
-          margin-top: 0.4rem; // TODO: Fix svg
           vertical-align: middle;
         }
       }
