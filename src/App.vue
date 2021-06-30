@@ -1,30 +1,83 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="app">
+    <teleport to="#overlay-1">
+      <opening
+        v-show="isOpeningVisible"
+        @on-complete="onOpeningComplete"
+      />
+    </teleport>
+
+    <!-- ↑ Only production bug. Teleport with v-if in root component behave strange  ↓ -->
+
+    <template
+      v-if="
+      !isOpeningVisible &&
+      [graphicDesigns, uiDesigns, designer].every(content => content.isAvailable.value)
+      "
+    >
+      <router-view v-if="!generals.shouldHandleAsSp.value" key="main" />
+      <sp v-else key="sp" />
+    </template>
   </div>
-  <router-view/>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { defineComponent, provide, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
 
-#nav {
-  padding: 30px;
+import { useGenerals, GENERALS_KEY } from '@/composables/useGenerals'
+import { useGraphicDesigns, GRAPHIC_DESIGNS_KEY } from '@/composables/useGraphicDesigns'
+import { useUiDesigns, UI_DESIGNS_KEY } from '@/composables/useUiDesigns'
+import { useDesigner, DESIGNER_KEY } from '@/composables/useDesigner'
+import { useOpening } from '@/composables/useOpening'
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+import Opening from '@/templates/Opening.vue'
+import Sp from '@/views/Sp.vue'
 
-    &.router-link-exact-active {
-      color: #42b983;
+export default defineComponent({
+  name: 'App',
+  components: {
+    Opening,
+    Sp
+  },
+  setup () {
+    const generals = useGenerals()
+    generals.registerRouteNav(useRouter())
+    provide(GENERALS_KEY, generals)
+    const graphicDesigns = useGraphicDesigns()
+    provide(GRAPHIC_DESIGNS_KEY, graphicDesigns)
+    const uiDesigns = useUiDesigns()
+    provide(UI_DESIGNS_KEY, uiDesigns)
+    const designer = useDesigner()
+    provide(DESIGNER_KEY, designer)
+    const { isOpeningVisible, onOpeningComplete } = useOpening(generals)
+
+    // Prefetch for smooth transition
+    graphicDesigns.fetch()
+    uiDesigns.fetch()
+    designer.fetch()
+
+    onMounted(() => {
+      generals.initialize()
+      window.addEventListener('resize', generals.initialize) // For browser debugger, changing userAgent. Actually updateWindowsInnerSize is enough
+    })
+
+    return {
+      generals,
+      graphicDesigns,
+      uiDesigns,
+      designer,
+      isOpeningVisible,
+
+      onOpeningComplete
     }
   }
+})
+</script>
+
+<style lang="scss" scoped>
+.app {
+  width: 100%;
+  height: 100%;
 }
 </style>

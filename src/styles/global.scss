@@ -1,0 +1,63 @@
+* {
+  position: relative;
+  overflow: -moz-scrollbars-none;
+  font-family: Futura, 'Century Gothic', 游ゴシック体, YuGothic, 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 游ゴシック, 'Yu Gothic', メイリオ, Meiryo, sans-serif;
+  color: #040404;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-x: none;
+  background-color: #eee;
+}
+
+body {
+  min-width: 319px;
+}
+
+p,
+input,
+textarea,
+select {
+  display: block;
+  resize: none;
+  outline: none;
+}
+
+span {
+  display: inline-block;
+}
+
+a {
+  border-style: none;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 721px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  html,
+  body {
+    overflow: hidden;
+  }
+}

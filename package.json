@@ -3,20 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "serve": "vue-cli-service serve --mode dev",
+    "build": "vue-cli-service build --mode prod",
+    "test": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint",
+    "stylelint": "stylelint \"src/**/*.{vue,scss,css}\""
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "bluebird": "^3.7.2",
     "core-js": "^3.6.5",
+    "jquery": "^3.6.0",
+    "normalize-css": "^2.3.1",
     "register-service-worker": "^1.7.1",
+    "slick-carousel": "^1.8.1",
+    "smartphone-app-designers-portfolio-api-docs": "git+https://github.com/minericefield/smartphone-app-designers-portfolio-api-docs.git",
     "vue": "^3.0.0",
+    "vue-lottie": "^0.2.1",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
+    "@types/axios": "^0.14.0",
+    "@types/bluebird": "^3.5.35",
     "@types/jest": "^24.0.19",
+    "@types/jquery": "^3.5.5",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -32,9 +44,16 @@
     "@vue/test-utils": "^2.0.0-0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
+    "eslint-plugin-vue-scoped-css": "^1.2.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recess-order": "^2.4.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0",
     "typescript": "~4.1.5",
+    "vue-composable-tester": "^0.1.3",
     "vue-jest": "^5.0.0-0"
   }
 }
