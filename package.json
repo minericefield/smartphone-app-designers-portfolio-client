@@ -1,6 +1,6 @@
 {
   "name": "smartphone-app-designers-portfolio-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve --mode dev",
@@ -17,7 +17,7 @@
     "normalize-css": "^2.3.1",
     "register-service-worker": "^1.7.1",
     "slick-carousel": "^1.8.1",
-    "smartphone-app-designers-portfolio-api-docs": "git+https://github.com/minericefield/smartphone-app-designers-portfolio-api-docs.git",
+    "smartphone-app-designers-portfolio-api-docs": "git+https://github.com/minericefield/smartphone-app-designers-portfolio-api-docs.git#0.1.0",
     "vue": "^3.0.0",
     "vue-lottie": "^0.2.1",
     "vue-router": "^4.0.0-0",

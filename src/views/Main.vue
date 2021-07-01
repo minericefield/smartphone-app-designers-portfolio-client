@@ -1,5 +1,5 @@
 <template>
-  <div
+  <main
     class="main"
     v-prevent-horizontally-wheeling
   >
@@ -16,14 +16,12 @@
       @on-transition-overlay-enter="transit"
       @on-transition-overlay-after-enter="isTransitionOverlayVisible = false"
     />
-  </div>
+  </main>
 </template>
 
 <script lang="ts">
 import { defineComponent, inject } from 'vue'
 import { useRoute } from 'vue-router'
-
-import { MAIN_ROUTE_NAMES } from '@/helpers/constants'
 
 import { graphicDesignsDefault, GRAPHIC_DESIGNS_KEY } from '@/composables/useGraphicDesigns'
 import { uiDesignsDefault, UI_DESIGNS_KEY } from '@/composables/useUiDesigns'
@@ -50,12 +48,7 @@ export default defineComponent({
     } = useLeftNav(
       graphicDesigns,
       uiDesigns,
-      designer,
-      {
-        graphicDesigns: MAIN_ROUTE_NAMES['graphic-designs'],
-        uiDesigns: MAIN_ROUTE_NAMES['ui-designs'],
-        designer: MAIN_ROUTE_NAMES['designer']
-      }
+      designer
     )
     const route = useRoute()
 
