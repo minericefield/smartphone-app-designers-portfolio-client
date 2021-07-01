@@ -23,8 +23,6 @@
 import { defineComponent, inject } from 'vue'
 import { useRoute } from 'vue-router'
 
-import { MAIN_ROUTE_NAMES } from '@/helpers/constants'
-
 import { graphicDesignsDefault, GRAPHIC_DESIGNS_KEY } from '@/composables/useGraphicDesigns'
 import { uiDesignsDefault, UI_DESIGNS_KEY } from '@/composables/useUiDesigns'
 import { designerDefault, DESIGNER_KEY } from '@/composables/useDesigner'
@@ -50,12 +48,7 @@ export default defineComponent({
     } = useLeftNav(
       graphicDesigns,
       uiDesigns,
-      designer,
-      {
-        graphicDesigns: MAIN_ROUTE_NAMES['graphic-designs'],
-        uiDesigns: MAIN_ROUTE_NAMES['ui-designs'],
-        designer: MAIN_ROUTE_NAMES['designer']
-      }
+      designer
     )
     const route = useRoute()
 

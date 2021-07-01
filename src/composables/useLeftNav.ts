@@ -19,34 +19,29 @@ export type SectionWords = {
 export const useLeftNav = (
   graphicDesigns: GraphicDesigns,
   uiDesigns: UiDesigns,
-  designer: Designer,
-  routeNames: {
-    graphicDesigns: MAIN_ROUTE_NAMES,
-    uiDesigns: MAIN_ROUTE_NAMES,
-    designer: MAIN_ROUTE_NAMES
-  }
+  designer: Designer
 ) => {
   const router = useRouter()
   const route = useRoute()
   const sectionWordsList = computed<SectionWords[]>(() => {
     return [
       {
-        routeName: routeNames.graphicDesigns,
+        routeName: MAIN_ROUTE_NAMES['graphic-designs'],
         sectionWords: unref(graphicDesigns.sectionWords),
         baseColor: graphicDesigns.displayedDesign.value.baseColor,
-        isCurrentPage: route.name === routeNames.graphicDesigns
+        isCurrentPage: route.name === MAIN_ROUTE_NAMES['graphic-designs']
       },
       {
-        routeName: routeNames.uiDesigns,
+        routeName: MAIN_ROUTE_NAMES['ui-designs'],
         sectionWords: unref(uiDesigns.sectionWords),
         baseColor: uiDesigns.displayedDesign.value.baseColor,
-        isCurrentPage: route.name === routeNames.uiDesigns
+        isCurrentPage: route.name === MAIN_ROUTE_NAMES['ui-designs']
       },
       {
-        routeName: routeNames.designer,
+        routeName: MAIN_ROUTE_NAMES['designer'],
         sectionWords: unref(designer.sectionWords),
         baseColor: designer.designer.baseColor,
-        isCurrentPage: route.name === routeNames.designer
+        isCurrentPage: route.name === MAIN_ROUTE_NAMES['designer']
       }
     ]
   })
