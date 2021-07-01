@@ -1,5 +1,5 @@
 <template>
-  <div
+  <section
     class="designs"
     v-prevent-horizontally-wheeling="{ horizontalCallback: slideWheel }"
   >
@@ -20,7 +20,7 @@
       :design="displayedDesign"
       :slide-direction="slideDirection"
     />
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

@@ -1,5 +1,5 @@
 <template>
-  <div
+  <main
     class="main"
     v-prevent-horizontally-wheeling
   >
@@ -16,7 +16,7 @@
       @on-transition-overlay-enter="transit"
       @on-transition-overlay-after-enter="isTransitionOverlayVisible = false"
     />
-  </div>
+  </main>
 </template>
 
 <script lang="ts">

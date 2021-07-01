@@ -1,5 +1,5 @@
 <template>
-  <div class="sp-designer">
+  <section class="sp-designer">
     <section-words
       :section-words="sectionWords"
     />
@@ -7,7 +7,7 @@
       :designer="designer"
       :id="slickId"
     />
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
