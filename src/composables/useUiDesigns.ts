@@ -1,5 +1,7 @@
 import { InjectionKey } from 'vue'
 
+import { CATEGORIES } from '@/helpers/constants'
+
 import { useDesigns } from '@/composables/useDesigns'
 import { useDesignsControl } from '@/composables/useDesignsControl'
 import { useUiDesignsSectionWords } from '@/composables/useUiDesignsSectionWords'
@@ -9,7 +11,7 @@ export const useUiDesigns = () => {
   const designsControl = useDesignsControl(designs)
   const { sectionWords } = useUiDesignsSectionWords()
 
-  const fetch = () => fetchDesigns(1)
+  const fetch = () => fetchDesigns(CATEGORIES['UI DESIGN'])
 
   return {
     designs,

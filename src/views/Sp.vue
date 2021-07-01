@@ -8,14 +8,14 @@
           'blur-released': (didNavLeave && !isNavVisible)
         }"
       />
-      <div
+      <main
         class="sp_contents"
         :class="{
           'blured': isNavVisible,
           'blur-released': (didNavLeave && !isNavVisible)
         }"
       >
-        <div class="sp_contents_main" id="sp_contents_main">
+        <div class="sp_contents_main">
           <sp-designs
             :section-words="graphicDesigns.sectionWords.value"
             :designs="graphicDesigns.designs.value"
@@ -35,7 +35,7 @@
             :id="ids.designer"
           />
         </div>
-      </div>
+      </main>
 
       <teleport to="#overlay-1">
         <sp-nav-overlay

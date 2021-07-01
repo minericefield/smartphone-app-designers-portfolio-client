@@ -1,6 +1,6 @@
 <template>
   <transition name="sp-nav-overlay-fade" @after-leave="$emit('on-left')" appear>
-    <div
+    <nav
       v-if="isVisible"
       class="sp-nav-overlay"
       @touchmove.prevent
@@ -27,7 +27,7 @@
           @on-click="isVisible = false, $emit('on-section-click', sectionWords.id)"
         />
       </div>
-    </div>
+    </nav>
   </transition>
 </template>
 

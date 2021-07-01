@@ -1,5 +1,5 @@
 <template>
-  <div
+  <nav
     class="left-nav"
   >
     <div
@@ -33,7 +33,7 @@
         />
       </transition>
     </teleport>
-  </div>
+  </nav>
 </template>
 
 <script lang="ts">

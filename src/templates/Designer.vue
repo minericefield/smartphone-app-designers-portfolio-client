@@ -1,5 +1,5 @@
 <template>
-  <div
+  <section
     class="designer"
   >
     <bg-behind :content="designer" />
@@ -28,7 +28,7 @@
         {{ designer.description }}
       </p>
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

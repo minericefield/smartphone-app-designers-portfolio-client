@@ -1,8 +1,8 @@
 <template>
-  <div class="sp-heading">
+  <header class="sp-heading">
     <ham-menu @on-click="$emit('on-ham-menu-click')" />
     <img src="../assets/logo.svg" class="sp-heading_logo" />
-  </div>
+  </header>
 </template>
 
 <script lang="ts">
